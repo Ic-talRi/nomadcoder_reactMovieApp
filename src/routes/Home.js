@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
+import "./Home.css"
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -27,13 +28,13 @@ function Home() {
     // }, [])
 
     return (
-        <div>
+        <div className="home-bg">
         {loading ? 
             <h1>
             <strong>Loading...</strong>
             </h1> 
             : 
-            <div> 
+            <div className="home-cd"> 
             {movies.map((row) => (
                 <Movie 
                     key={row.id}
